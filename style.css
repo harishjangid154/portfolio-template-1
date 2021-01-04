@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+.header {
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  background: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+nav > a > img {
+  height: 10vh;
+  padding-left: 10vw;
+}
+
+.landing {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(images/background.png);
+  background-attachment: fixed;
+  background-repeat: none;
+}
+.landing > img {
+  height: 50vh;
+}
+.name {
+  font-family: "Yellowtail", cursive;
+  font-size: 3rem;
+  margin: 0px;
+}
+
+#about {
+  min-height: 100vh;
+  margin-top: 2vh;
+}
+
+#about > h1 {
+  text-align: center;
+  padding-top: 2vh;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3em;
+}
+
+.self {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.self > img {
+  height: 80vh;
+  margin: 0 80px;
+}
+.self > p {
+  font-family: "Audiowide", cursive;
+  font-size: 2rem;
+  padding: 0 5vw;
+}
+
+.skills {
+  height: 100vh;
+  width: 100%;
+  margin-top: 2vh;
+  background-image: url(images/contact-backgroundf.png);
+  background-repeat: none;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.card_container {
+  margin: 4vh;
+
+  height: 100%;
+  display: grid;
+  grid-template-columns: 30% 30% 20%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card {
+  margin: 2vh;
+  height: 25vh;
+  width: 20vw;
+  transition: all 1s ease;
+  border-radius: 10px;
+  box-shadow: 0 2px 50px rgb(126, 146, 128);
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(214, 223, 231);
+}
+.card > p {
+  display: none;
+}
+.card:hover {
+  transform: scale(1.5);
+  box-shadow: 0 2px 40px black;
+}
+.card:hover > p {
+  display: block;
+}
+
+#myVideo {
+  z-index: -1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+
+  width: 100%;
+}
+.contact {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.contact_form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.contact_form > h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 3em;
+}
+
+input[type="text"] {
+  height: 50px;
+  width: 25vw;
+  border: 1px solid gray;
+  border-radius: 30px;
+  margin: 2vw;
+  padding: 20px;
+  font-size: 1.5em;
+  background: none;
+  box-shadow: 0 0 10px white;
+  font-family: "Audiowide", cursive;
+}
+textarea {
+  width: 25vw;
+  border: 1px solid gray;
+  border-radius: 30px;
+  margin: 2vw;
+  padding: 20px;
+  font-size: 1.5em;
+  background: none;
+  box-shadow: 0 0 10px white;
+  font-family: "Audiowide", cursive;
+}
+input[type="text"]:focus,
+textarea:focus,
+input[type=submit] {
+  outline: none;
+}
+input[type=submit]{
+    height: 7vh;
+    width: 25vw;
+    margin: 2vw;
+    background: none;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+input[type=submit]:hover{
+    background-color: lightblue;
+}
+
+.footer{
+    margin-top: 5vh;
+    font-size: 0.5rem;
+    color: black;
+    font-weight: lighter;
+    text-align: center;
+}
