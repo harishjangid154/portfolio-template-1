@@ -13,12 +13,15 @@ body::-webkit-scrollbar {
   display: none;
 }
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  font-family: "Homemade Apple", cursive;
+  font-weight: bold;
+  font-size: 2em;
+  padding-left: 4em;
 }
 
 nav {
-  background: none;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -33,17 +36,20 @@ nav > a > img {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image: url(images/background.png);
+  background-image: url(images/background.jpg);
   background-attachment: fixed;
   background-repeat: none;
+  background-size: cover;
 }
 .landing > img {
   height: 50vh;
+  
 }
 .name {
   font-family: "Yellowtail", cursive;
   font-size: 3rem;
   margin: 0px;
+  color:rgb(147, 170, 42);
 }
 
 #about {
@@ -66,8 +72,10 @@ nav > a > img {
 .self > img {
   height: 80vh;
   margin: 0 80px;
+  border-radius: 30px;
+    box-shadow: 0 2px 50px rgb(221, 230, 222);
 }
-.self > p {
+.self > div > p {
   font-family: "Audiowide", cursive;
   font-size: 2rem;
   padding: 0 5vw;
@@ -87,15 +95,15 @@ nav > a > img {
 
   height: 100%;
   display: grid;
-  grid-template-columns: 30% 30% 20%;
+  grid-template-columns: 30% 30% 30%;
   justify-content: space-evenly;
   align-items: center;
 }
 
 .card {
   margin: 2vh;
-  height: 25vh;
-  width: 20vw;
+  min-height: 25vh;
+  min-width: 20vw;
   transition: all 1s ease;
   border-radius: 10px;
   box-shadow: 0 2px 50px rgb(126, 146, 128);
@@ -110,8 +118,9 @@ nav > a > img {
   display: none;
 }
 .card:hover {
-  transform: scale(1.5);
-  box-shadow: 0 2px 40px black;
+  transform: scale(1.3);
+  width: fit-content;
+  box-shadow: 0 2px 40px black, 0 2px 40px rgba(161, 224, 253, 0.856) inset;
 }
 .card:hover > p {
   display: block;
@@ -141,9 +150,13 @@ nav > a > img {
   width: 100%;
 }
 
-.contact_form > h1{
-    font-family: "Montserrat", sans-serif;
-    font-size: 3em;
+.contact_form > div > h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
+.contact_form > div > div {
+  display: flex;
 }
 
 input[type="text"] {
@@ -171,25 +184,25 @@ textarea {
 }
 input[type="text"]:focus,
 textarea:focus,
-input[type=submit] {
+input[type="submit"] {
   outline: none;
 }
-input[type=submit]{
-    height: 7vh;
-    width: 25vw;
-    margin: 2vw;
-    background: none;
-    border: 1px solid black;
-    border-radius: 30px;
+input[type="submit"] {
+  height: 7vh;
+  width: 25vw;
+  margin: 2vw;
+  background: none;
+  border: 1px solid black;
+  border-radius: 30px;
 }
-input[type=submit]:hover{
-    background-color: lightblue;
+input[type="submit"]:hover {
+  background-color: lightblue;
 }
 
-.footer{
-    margin-top: 5vh;
-    font-size: 0.5rem;
-    color: black;
-    font-weight: lighter;
-    text-align: center;
+.footer {
+  margin-top: 5vh;
+  font-size: 0.5rem;
+  color: black;
+  font-weight: lighter;
+  text-align: center;
 }
